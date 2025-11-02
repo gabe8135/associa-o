@@ -41,4 +41,13 @@ document.addEventListener("DOMContentLoaded", () => {
       form.reset();
     });
   }
+  // Inicializar AOS (Animate On Scroll) se disponível
+  if (window.AOS) {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: "ease-in-out",
+      offset: 120,
+    });
+  }
 });

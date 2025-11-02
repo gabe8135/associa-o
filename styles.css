@@ -1,0 +1,85 @@
+/* styles.css - Landing page simples com animações */
+:root{
+  --bg:#0b0f1a;
+  --accent:#0ea5a4;
+  --muted:#8b98a5;
+  --card:#ffffff;
+  --maxw:1100px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  color:#0f1724;background:#f7fafc;line-height:1.5;-webkit-font-smoothing:antialiased;
+}
+.container{max-width:var(--maxw);margin:0 auto;padding:24px}
+.hero{height:60vh;min-height:420px;display:flex;align-items:center;position:relative;background-image:url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;color:#fff}
+.hero .overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.45),rgba(0,0,0,0.62));backdrop-filter:blur(4px)}
+.hero-content{position:relative;z-index:2;padding:40px}
+.hero h1{font-size:clamp(28px,5vw,44px);margin:0 0 12px}
+.lead{font-size:16px;margin:0 0 18px;color:rgba(255,255,255,0.92)}
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700;margin-right:10px;
+  color:#fff;background:linear-gradient(90deg,#06b6d4 0%,#3b82f6 100%);box-shadow:0 8px 20px rgba(59,130,246,0.18);border:none;transition:transform .18s ease,box-shadow .18s ease,opacity .12s ease}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(59,130,246,0.2);opacity:0.98}
+.btn:active{transform:translateY(-1px)}
+.btn.ghost{
+  background:#ffffff;
+  border:1px solid #e6eef2;
+  color:#0b1220;
+  box-shadow:0 6px 16px rgba(2,6,23,0.06);
+}
+.btn.ghost:hover{
+  box-shadow:0 10px 24px rgba(2,6,23,0.08);
+  transform:translateY(-2px);
+}
+.btn.ghost:active{transform:translateY(-1px)}
+.section{padding:48px 0}
+.section-title{margin:0 0 18px;font-size:20px}
+.grid{display:grid;gap:18px}
+.grid.cols-3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+.card img{width:100%;height:160px;object-fit:cover;display:block}
+.card-body{padding:16px}
+.news-card{background:#fff;border-radius:8px;padding:12px;box-shadow:0 4px 12px rgba(2,6,23,0.04)}
+.news-card img{width:100%;height:140px;object-fit:cover;border-radius:6px}
+.rules{margin:0;padding-left:20px}
+.contact-card{background:#fff;padding:18px;border-radius:10px;display:flex;flex-direction:column;gap:8px}
+.contact-card input,.contact-card textarea{padding:10px;border:1px solid #e6eef2;border-radius:8px}
+.map-card img{width:100%;height:220px;object-fit:cover;border-radius:8px}
+.muted{color:var(--muted);font-size:13px}
+.site-footer{background:#f1f5f9;padding:22px 0;margin-top:30px}
+.footer-grid{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.social a{color:var(--accent);text-decoration:none;margin-right:8px}
+/* Remover aparência de "card" apenas na seção de Regras/Diretrizes */
+#regras .card{
+  background:transparent;
+  box-shadow:none;
+  border-radius:0;
+  padding:0;
+}
+/* Responsive */
+@media (min-width:900px){.hero{height:66vh}.grid{grid-template-columns:1fr 1fr}}
+@media (max-width:899px){.footer-grid{flex-direction:column;align-items:flex-start}}
+
+/* Ajustes para botões no hero em telas pequenas: empilhar e espaçar o botão 'Saiba mais' */
+@media (max-width:600px){
+  .hero-cta{display:flex;flex-direction:column;align-items:stretch}
+  .hero-cta .btn{width:100%;}
+  /* adiciona espaçamento superior ao botão secundário para não ficar colado */
+  .hero-cta .btn.ghost{margin-top:12px}
+}
+
+/* Animations */
+.animate{opacity:0;transform:translateY(10px);transition:all 700ms cubic-bezier(.2,.9,.2,1)}
+.animate.is-visible{opacity:1;transform:none}
+[data-anim="slide-up"]{transition-duration:700ms}
+[data-anim="fade-in"]{transition-duration:900ms}
+
+/* small utils */
+.section .grid{align-items:stretch}
+.card-body h3{margin:0 0 8px}
+.news-card h4{margin:8px 0}
+.btn{cursor:pointer}
+
+/* accessibility */
+a:focus{outline:3px solid rgba(14,165,164,0.18);outline-offset:3px}

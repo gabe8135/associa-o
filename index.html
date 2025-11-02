@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Viva Aurora — Associação de Moradores</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Associação de Moradores do Bairro Aurora — notícias, regras e contato.">
+</head>
+<body>
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="container hero-content">
+  <h1 class="animate" data-anim="slide-up">Viva Aurora</h1>
+  <p class="lead animate" data-anim="fade-in">Associação de Moradores do Bairro Aurora — unindo a comunidade e divulgando avisos importantes.</p>
+      <div class="hero-cta animate" data-anim="fade-in">
+        <a class="btn" href="https://wa.me/5591999999999?text=Ol%C3%A1%2C+gostaria+de+mais+informa%C3%A7%C3%B5es" target="_blank" rel="noopener">Entrar em contato (WhatsApp)</a>
+        <a class="btn ghost" href="#sobre">Saiba mais</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="sobre" class="section">
+      <h2 class="section-title animate" data-anim="slide-up">Sobre a Associação</h2>
+      <div class="grid">
+        <div class="card animate" data-anim="fade-in">
+          <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1200&q=80" alt="Comunidade"/>
+          <div class="card-body">
+            <h3>Quem somos</h3>
+            <p>Somos um grupo de moradores comprometidos com a melhoria do bairro: comunicação, segurança e eventos comunitários.</p>
+          </div>
+        </div>
+        <div class="card animate" data-anim="fade-in">
+          <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=80" alt="Reunião comunitária"/>
+          <div class="card-body">
+            <h3>O que fazemos</h3>
+            <p>Divulgação de avisos, organização de reuniões, campanhas de limpeza e apoio a projetos locais.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="noticias" class="section">
+      <h2 class="section-title animate" data-anim="slide-up">Últimas notícias</h2>
+      <div class="grid cols-3">
+        <article class="news-card animate" data-anim="fade-in">
+          <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=800&q=60" alt="Notícia 1">
+          <h4>Mutirão de limpeza</h4>
+          <p>Participe do mutirão na praça central no sábado às 9h. Traga luvas e garrafas vazias.</p>
+        </article>
+        <article class="news-card animate" data-anim="fade-in">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=60" alt="Notícia 2">
+          <h4>Assembleia mensal</h4>
+          <p>Assembleia dia 10, às 19h — pauta: segurança e projetos de iluminação pública.</p>
+        </article>
+        <article class="news-card animate" data-anim="fade-in">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=60" alt="Notícia 3">
+          <h4>Cadastro de voluntários</h4>
+          <p>Abra vagas para voluntariado em ações de assistência e manutenção de praças.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="regras" class="section">
+      <h2 class="section-title animate" data-anim="slide-up">Regras e Diretrizes</h2>
+      <div class="card animate" data-anim="fade-in">
+        <ul class="rules">
+          <li>Respeito entre vizinhos e manutenção de áreas comuns.</li>
+          <li>Divulgação de avisos oficiais pela associação.</li>
+          <li>Proibição de publicações que incentivem discriminação ou violência.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contato" class="section">
+      <h2 class="section-title animate" data-anim="slide-up">Contato</h2>
+      <div class="grid">
+        <form class="contact-card animate" data-anim="fade-in" id="contactForm">
+          <label>Nome</label>
+          <input type="text" name="name" required>
+          <label>E-mail</label>
+          <input type="email" name="email" required>
+          <label>Mensagem</label>
+          <textarea name="message" rows="4" required></textarea>
+          <button class="btn" type="submit">Enviar mensagem</button>
+          <p class="muted">Ou chame no WhatsApp: <a href="https://wa.me/5591999999999" target="_blank" rel="noopener">(91) 99999-9999</a></p>
+        </form>
+        <div class="map-card animate" data-anim="fade-in">
+          <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&w=1200&q=80" alt="Praça do bairro">
+          <p class="muted">Endereço: Praça Central — Bairro Aurora</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <strong>Viva Aurora</strong>
+          <p class="muted">Associação de Moradores do Bairro Aurora</p>
+        </div>
+        <div>
+          <p class="muted">Siga-nos</p>
+          <nav class="social">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+          </nav>
+        </div>
+        <div>
+          <p class="muted">© <span id="year"></span> Viva Aurora</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
